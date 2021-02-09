@@ -1,6 +1,8 @@
 .App {
   text-align: center;
-  margin-top: 60px;
+  background-color: #282c34;
+  /* margin-bottom: 70px; */
+  color: white;
 }
 
 .App-logo {
@@ -29,9 +31,6 @@
   color: #61dafb;
 }
 
-input{
-  color: white !important;
-}
 
 @keyframes App-logo-spin {
   from {
