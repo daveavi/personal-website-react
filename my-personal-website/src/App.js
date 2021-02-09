@@ -8,14 +8,22 @@ import FormControlLabel from '@material-ui/core/FormControlLabel'
 import {makeStyles, ThemeProvider, createMuiTheme} from '@material-ui/core/styles'
 
 import AppBar from '@material-ui/core/AppBar';
+import MenuIcon from "@material-ui/icons/Menu";
+import ToolBar from "@material-ui/core/Toolbar"
 import Typography from '@material-ui/core/Typography';
 
 import 'fontsource-roboto' 
+import { IconButton } from '@material-ui/core';
 const useStyles = makeStyles((theme) => ({
   rightToolbar: {
     marginLeft: "auto",
-    marginRight:30
-  }
+    marginRight:30,
+    paddingBottom: theme.spacing(1)
+  }, 
+  menuButton:{
+    marginRight:16,
+    marginLeft: -12
+  },
 }));
 
 const theme =  createMuiTheme({
@@ -58,15 +66,22 @@ return (
   <ThemeProvider theme={theme}>
       <div className="App">
         <header className="App-header">
-        <AppBar style={{ background: '#818b9e' }} position="fixed">
-          <section className={classes.rightToolbar}>
-            <Button color="inherit">About</Button>
-            <Button color="inherit">Projects</Button>
-            <Button color="inherit">Music</Button>
-          </section>
+        <AppBar style={{ background: '#282c34' }} position="fixed">
+          <ToolBar>
+            <IconButton
+              className = {classes.menuButton}
+              aria-label="Menu"
+              color="inherit"
+            >
+              <MenuIcon/>
+            </IconButton>
+          </ToolBar>
        </AppBar>
         <Typography variant="h2" component = "div">
-          Hello! I'm Avi! 
+          Avi Dave 
+        </Typography>
+        <Typography varianet= "h1">
+          Self Improving, Developer, Beat Maker
         </Typography>
         </header>
       </div>
