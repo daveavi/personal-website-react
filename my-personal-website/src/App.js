@@ -68,8 +68,16 @@ const useStyles = makeStyles((theme) => ({
     ...theme.mixins.toolbar,
     justifyContent: 'flex-end',
   },
-  leftIcon:{
-    
+  listItem:{
+    '&:hover $listItemText': {
+      color: 'grey'
+    },
+    border: 'none',
+    outline: '0 !important'
+
+  },
+  listItemText:{
+
   }
 }));
 
@@ -139,12 +147,12 @@ function App() {
         </div>
 
           <List>
-              {['About', 'Music', 'Projects'].map((text, index) => (
-                <ListItem button key={text}>
-                  <ListItemText primary={text} />
+              {['Home','About', 'Projects', 'Music'].map((text) => (
+                <ListItem className={classes.listItem} button key={text}>
+                  <ListItemText className={classes.listItemText} primary={text}/>
                 </ListItem>
               ))}
-            </List>
+          </List>
           </Drawer>  
           <Typography variant="h2" component = "div">
             Avi Dave 
