@@ -70,11 +70,9 @@ const useStyles = makeStyles((theme) => ({
   },
   listItem:{
     '&:hover $listItemText': {
-      color: 'grey'
+      color: 'grey',
+      cursor: 'pointer'
     },
-    border: 'none',
-    outline: '0 !important'
-
   },
   listItemText:{
 
@@ -148,7 +146,7 @@ function App() {
 
           <List>
               {['Home','About', 'Projects', 'Music'].map((text) => (
-                <ListItem className={classes.listItem} button key={text}>
+                <ListItem className={classes.listItem} key={text}>
                   <ListItemText className={classes.listItemText} primary={text}/>
                 </ListItem>
               ))}
