@@ -8,15 +8,19 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 
 
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import AppBar from '@material-ui/core/AppBar';
 import MenuIcon from "@material-ui/icons/Menu";
-import ToolBar from "@material-ui/core/Toolbar"
+import ToolBar from "@material-ui/core/Toolbar";
 import Typography from '@material-ui/core/Typography';
 
 import 'fontsource-roboto' 
 import { IconButton } from '@material-ui/core';
 import {makeStyles, ThemeProvider, createMuiTheme} from '@material-ui/core/styles'
+
+
+import LinkedInIcon from '@material-ui/icons/LinkedIn'; 
+import GitHubIcon from '@material-ui/icons/GitHub';
 
 const drawerWidth = 100;
 
@@ -75,7 +79,17 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   listItemText:{
-
+    
+  },
+  iconContainer: {
+    marginTop: 20,
+    verticalAlign: 'middle',
+    justifyContent: 'space-between'
+  },
+  icon:{
+    width: 60,
+    height: 60,
+    "&:hover, &.MuiIconButton-root": {color: "white" }
   }
 }));
 
@@ -104,6 +118,7 @@ function App() {
   const handleDrawerClose = () => {
     setOpen(false)
   }
+
   return (
     <ThemeProvider theme={theme}>
         <div className="App">
@@ -158,6 +173,18 @@ function App() {
           <Typography varianet= "h1">
             Self Improving, Developer, Beat Maker
           </Typography>
+          <div className={classes.iconContainer}>
+            {/* <IconButton
+              className={classes.icon}
+            > */}
+              <LinkedInIcon className={classes.icon} />
+            {/* </IconButton> */}
+            {/* <IconButton
+              className={classes.icon}
+            > */}
+              <GitHubIcon  className={classes.icon}/>
+            {/* </IconButton> */}
+          </div>
           </header>
         </div>
     </ThemeProvider>
