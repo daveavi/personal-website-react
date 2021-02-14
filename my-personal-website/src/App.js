@@ -82,22 +82,27 @@ const useStyles = makeStyles((theme) => ({
     
   },
   iconContainer: {
-    marginTop: 20,
+    paddingTop: 50,
     verticalAlign: 'middle',
-    justifyContent: 'space-between'
+    margin: '10px 0',
   },
   icon:{
-    width: 60,
-    height: 60,
-    "&:hover, &.MuiIconButton-root": {color: "white" }
+    width: 40,
+    height: 40,
+    "&:hover, &.MuiIconButton-root": {color: "white" },
+    cursor: 'pointer',
   }
 }));
 
+
 const theme =  createMuiTheme({
   typography: {
-    h2: {
+    h1: {
       fontSize: 40,
-      marginBottom: 40
+      marginBottom: 30
+    },
+    h2:{
+      fontSize: 40
     }
   },
 })
@@ -122,7 +127,6 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
         <div className="App">
-          <header className="App-header">
           <AppBar 
           style={{ background: 'black' }} 
           position="fixed"
@@ -153,11 +157,10 @@ function App() {
         >
 
 
-        <div className={classes.drawerHeader}>
+      
           <IconButton onClick={handleDrawerClose}>
-            <ChevronLeftIcon style={{fill: "white", marginRight:25}}/>
+            <ChevronLeftIcon style={{fill: "white", marginRight:25, marginTop:10}}/>
           </IconButton>
-        </div>
 
           <List>
               {['Home','About', 'Projects', 'Music'].map((text) => (
@@ -166,26 +169,28 @@ function App() {
                 </ListItem>
               ))}
           </List>
-          </Drawer>  
-          <Typography variant="h2" component = "div">
-            Avi Dave 
-          </Typography>
-          <Typography varianet= "h1">
-            Self Improving, Developer, Beat Maker
-          </Typography>
-          <div className={classes.iconContainer}>
-            {/* <IconButton
-              className={classes.icon}
-            > */}
-              <LinkedInIcon className={classes.icon} />
-            {/* </IconButton> */}
-            {/* <IconButton
-              className={classes.icon}
-            > */}
-              <GitHubIcon  className={classes.icon}/>
-            {/* </IconButton> */}
+          </Drawer>
+
+          <div className={classes.introDiv}>
+            <Typography variant="h1">
+              Avi Dave 
+            </Typography>
+
+            <Typography varianet= "h2">
+              Self Improving, Developer, Beat Maker
+            </Typography>
           </div>
-          </header>
+
+          <div className={classes.iconContainer}>
+            <a href="https://www.linkedin.com/in/avi-dave-854715164/" class="href-class" target="_blank">
+              <LinkedInIcon  className={classes.icon} />
+            </a>
+
+            <a href="https://github.com/daveavi" class="href-class" target="_blank">
+              <GitHubIcon className={classes.icon} style={{marginLeft: '50'}}/>
+            </a>
+
+          </div>
         </div>
     </ThemeProvider>
     );
