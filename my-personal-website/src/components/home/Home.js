@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './css/Home.css';
 
 import clsx from 'clsx';
 import Drawer from '@material-ui/core/Drawer';
@@ -115,7 +115,7 @@ const theme =  createMuiTheme({
 
 
 
-function App() {
+const Home = () => {
   const classes = useStyles();
   
 
@@ -130,7 +130,9 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-        <div className="App">
+        <div className="Home">
+
+          {/* this is my header */}
           <AppBar 
           style={{ background: 'black' }} 
           position="fixed"
@@ -152,7 +154,7 @@ function App() {
             </ToolBar>
           </AppBar>
 
-
+        {/* This is the side bar */}
         <Drawer
           className={classes.drawer}
           variant="persistent"
@@ -189,21 +191,19 @@ function App() {
           </div>
 
           <div className={classes.iconContainer}>
-
             <a href="https://www.linkedin.com/in/avi-dave-854715164/" class="href-class" target="_blank">
               <LinkedInIcon  className={classes.icon} />
             </a>
-
             <a href="https://github.com/daveavi" class="href-class" target="_blank">
               <GitHubIcon className={classes.icon} style={{marginLeft: '50'}}/>
             </a>
-
           </div>
+
+          
         </div>
     </ThemeProvider>
     );
 }
 
+export default Home;
 
-
-export default App;

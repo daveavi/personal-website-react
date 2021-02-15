@@ -7,8 +7,9 @@ import ListItemText from '@material-ui/core/ListItemText';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 
 
-function SideBar() {
+const SideBar = (styleClasses) => {
   const [open, setOpen] = React.useState(false);
+
   const handleDrawerOpen = () => {
     setOpen(true);
   };
@@ -17,27 +18,29 @@ function SideBar() {
     setOpen(false)
   }
 
+  const navItems = ['Home','About', 'Projects', 'Music']
+
   return(
 
     <Drawer
-      className={classes.drawer}
+      className={styleClasses.drawer}
       variant="persistent"
       anchor="left"
       open={open}
       classes={{
-        paper: classes.drawerPaper,
+        paper: styleClasses.drawerPaper,
       }}
     >
-    <div className={classes.drawerHeader}>
+    <div className={styleClasses.drawerHeader}>
       <IconButton onClick={handleDrawerClose}>
         <ChevronLeftIcon style={{fill: "white", marginRight:25}}/>
       </IconButton>
     </div>
 
       <List>
-          {['Home','About', 'Projects', 'Music'].map((text) => (
-            <ListItem className={classes.listItem} key={text}>
-              <ListItemText className={classes.listItemText} primary={text}/>
+          {navItems.map((text) => (
+            <ListItem className={styleClasses.listItem} key={text}>
+              <ListItemText className={styleClasses.listItemText} primary={text}/>
             </ListItem>
           ))}
       </List>
@@ -45,3 +48,5 @@ function SideBar() {
 
   );
 }
+
+export default SideBar;

@@ -8,25 +8,26 @@ import { IconButton } from '@material-ui/core';
 
 
 
+const Header = (styleClasses) => {
+    const handleDrawerOpen = () => {
+        setOpen(true);
+    };
 
-
-function Header(){
-    
     return (
         <AppBar 
             style={{ background: 'black' }} 
             position="fixed"
-            className={clsx(classes.appBar, {
-                [classes.appBarShift]: open,
+            className={clsx(styleClasses.appBar, {
+                [styleClasses.appBarShift]: open,
             })}>
                 <ToolBar>
                 <IconButton
-                    className = {classes.menuButton}
+                    className = {styleClasses.menuButton}
                     aria-label="Menu"
                     color="inherit"
                     onClick={handleDrawerOpen}
                     edge="start"
-                    className={clsx(classes.menuButton, open && classes.hide)}
+                    className={clsx(styleClasses.menuButton, open && styleClasses.hide)}
                 >
                     <MenuIcon/>
                 </IconButton>
@@ -34,3 +35,5 @@ function Header(){
         </AppBar>
     );
 }
+
+export default Header;
