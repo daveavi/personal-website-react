@@ -102,9 +102,13 @@ const theme =  createMuiTheme({
       marginBottom: 30
     },
     h2:{
-      fontSize: 40
+      fontSize: 20
     }
   },
+
+  div: {
+    "fontFamily": `"Roboto", "Helvetica", "Arial", sans-serif`,
+  }
 })
 
 
@@ -132,7 +136,8 @@ function App() {
           position="fixed"
           className={clsx(classes.appBar, {
             [classes.appBarShift]: open,
-          })}>
+          })}
+          >
             <ToolBar>
               <IconButton
                 className = {classes.menuButton}
@@ -145,7 +150,9 @@ function App() {
                 <MenuIcon/>
               </IconButton>
             </ToolBar>
-        </AppBar>
+          </AppBar>
+
+
         <Drawer
           className={classes.drawer}
           variant="persistent"
@@ -169,19 +176,20 @@ function App() {
                 </ListItem>
               ))}
           </List>
-          </Drawer>
+        </Drawer>
 
-          <div className={classes.introDiv}>
+          <div id="introDiv">
             <Typography variant="h1">
               Avi Dave 
             </Typography>
 
-            <Typography varianet= "h2">
+            <Typography variant="h2">
               Self Improving, Developer, Beat Maker
             </Typography>
           </div>
 
           <div className={classes.iconContainer}>
+
             <a href="https://www.linkedin.com/in/avi-dave-854715164/" class="href-class" target="_blank">
               <LinkedInIcon  className={classes.icon} />
             </a>
@@ -195,5 +203,7 @@ function App() {
     </ThemeProvider>
     );
 }
+
+
 
 export default App;
