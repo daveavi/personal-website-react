@@ -11,6 +11,12 @@
   color: white;
 }
 
+.iconContainer{
+  padding-top: 50;
+  vertical-align: middle;
+  margin: 50px 0;
+}
+
 .introDiv {
   position: fixed;
   justify-content: center;

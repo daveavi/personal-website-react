@@ -8,8 +8,8 @@ const useStyles = makeStyles((theme) => ({
         margin: '10px 0',
     },
     icon:{
-        width: 40,
-        height: 40,
+        width: 50,
+        height: 50,
         "&:hover, &.MuiIconButton-root": {color: "white" },
         cursor: 'pointer',
     }

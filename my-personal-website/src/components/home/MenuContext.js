@@ -8,13 +8,13 @@ export function useMenu(){
 }
 
 export function useMenuUpdate(){
-    return useMenuUpdate(MenuUpdateContext)
+    return useContext(MenuUpdateContext)
 }
 
 
 
 export function MenuProvider({children}) {
-    const [open, setOpen] = React.useState(false);
+    const [open, setOpen] = useState(false);
 
     const handleDrawer = () => {
         setOpen(prevOpen => !prevOpen);
@@ -22,9 +22,9 @@ export function MenuProvider({children}) {
 
     return (
         <MenuContext.Provider value={open}>
-            <MenuUpdateContext value={handleDrawer}>
+            <MenuUpdateContext.Provider value={handleDrawer}>
                 {children}
-            </MenuUpdateContext>
+            </MenuUpdateContext.Provider>
         </MenuContext.Provider>
     )
 }
