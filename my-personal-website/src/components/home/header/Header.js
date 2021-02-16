@@ -6,28 +6,30 @@ import MenuIcon from "@material-ui/icons/Menu";
 import ToolBar from "@material-ui/core/Toolbar";
 import { IconButton } from '@material-ui/core';
 
+import {useMenu, useMenuUpdate} from "../MenuContext"
 
+import {useStyles} from './css/styles'
 
-const Header = (styleClasses) => {
-    const handleDrawerOpen = () => {
-        setOpen(true);
-    };
-
+const Header = () => {
+    const classes = useStyles();
+    const open = useMenu()
+    const handleDrawer = useMenuUpdate()
     return (
+        
         <AppBar 
             style={{ background: 'black' }} 
             position="fixed"
-            className={clsx(styleClasses.appBar, {
-                [styleClasses.appBarShift]: open,
+            className={clsx(classes.appBar, {
+                [classes.appBarShift]: open,
             })}>
                 <ToolBar>
                 <IconButton
-                    className = {styleClasses.menuButton}
+                    className = {classes.menuButton}
                     aria-label="Menu"
                     color="inherit"
-                    onClick={handleDrawerOpen}
+                    onClick={handleDrawer}
                     edge="start"
-                    className={clsx(styleClasses.menuButton, open && styleClasses.hide)}
+                    className={clsx(classes.menuButton, open && classes.hide)}
                 >
                     <MenuIcon/>
                 </IconButton>
