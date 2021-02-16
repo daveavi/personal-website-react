@@ -41,7 +41,7 @@ const SideBar = () => {
             <Router>
               <List>
                 {navItems.map((text) => (
-                  <ListItem className={classes.listItem} key={text} component={Link} to="/${text}">
+                  <ListItem className={classes.listItem} key={text} component={Link} to={`/${text}`}>
                     <ListItemText className={classes.listItemText} primary={text}/>
                   </ListItem>
                 ))}
