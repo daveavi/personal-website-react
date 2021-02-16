@@ -1,12 +1,11 @@
 import React from 'react';
-import './css/Home.css';
-import {theme} from './css/theme'
-import {useStyles} from './css/styles'
-import {MenuProvider} from './MenuContext'
+import '../home/css/Home.css';
+import {theme} from '../home/css/theme'
+import {useStyles} from '../home/css/styles'
+import {MenuProvider} from '../home/MenuContext'
 import Header from '../header/Header'
 import SideBar from '../sidebar/SideBar'
-import Intro from './content/Intro'
-import Icon from './content/Icon'
+
 
 
 
@@ -19,7 +18,7 @@ import { createMuiTheme }  from '@material-ui/core/styles'
 
 
 
-const Home = () => {
+const About = () => {
   const classes = useStyles();
   const muiTheme = createMuiTheme(theme)
 
@@ -30,13 +29,12 @@ const Home = () => {
             <Header/>
             <SideBar/>
           </MenuProvider>
-          <Intro />
-
-          <Icon icon={classes.icon} iconContainer={classes.iconContainer}/>
+          <h1>
+              ABOUT!!!
+          </h1>
         </div>
     </ThemeProvider>
     );
 }
 
-export default Home;
-
+export default About;

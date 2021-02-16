@@ -1,7 +1,7 @@
 import React from 'react'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import GitHubIcon from '@material-ui/icons/GitHub'
-import '../css/Home.css';
+
 
 const Icon = ({iconContainer, icon}) => {
     return(

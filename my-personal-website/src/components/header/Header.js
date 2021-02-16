@@ -6,7 +6,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import ToolBar from "@material-ui/core/Toolbar";
 import { IconButton } from '@material-ui/core';
 
-import {useMenu, useMenuUpdate} from "../MenuContext"
+import {useMenu, useMenuUpdate} from "../home/MenuContext"
 
 import {useStyles} from './css/styles'
 
