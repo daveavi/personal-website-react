@@ -20,7 +20,7 @@ const SideBar = () => {
   const classes = useStyles();
   const open = useMenu()
   const handleDrawer = useMenuUpdate()
-  const navItems = ["Home","About"]
+  const navItems = ["Home","About","Projects","Music"]
 
   
   return (

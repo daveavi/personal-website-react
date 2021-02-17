@@ -1,10 +1,10 @@
 import React from 'react';
-import '../home/css/Home.css';
-import {theme} from '../home/css/theme'
-import {useStyles} from '../home/css/styles'
-import {MenuProvider} from '../home/MenuContext'
-import Header from '../header/Header'
-import SideBar from '../sidebar/SideBar'
+import '../../home/css/Home.css';
+import {theme} from '../../home/css/theme'
+import {useStyles} from '../../home/css/styles'
+import {MenuProvider} from '../../home/MenuContext'
+import Header from '../../header/Header'
+import SideBar from '../../sidebar/SideBar'
 
 
 
