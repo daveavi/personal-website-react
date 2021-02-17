@@ -12,8 +12,6 @@ import {useStyles} from './css/styles';
 
 import { BrowserRouter as Router, Route, Link, Switch} from "react-router-dom";
 
-import About from "../about/About"
-import Home from "../home/Home"
 
 
 
@@ -22,7 +20,7 @@ const SideBar = () => {
   const classes = useStyles();
   const open = useMenu()
   const handleDrawer = useMenuUpdate()
-  const navItems = ['Home','About']
+  const navItems = ["Home","About"]
 
   
   return (
@@ -38,19 +36,13 @@ const SideBar = () => {
             <IconButton onClick={handleDrawer}>
               <ChevronLeftIcon style={{fill: "white", marginRight:25, marginTop:10}}/>
             </IconButton>
-            <Router>
               <List>
-                {navItems.map((text) => (
-                  <ListItem className={classes.listItem} key={text} component={Link} to={`/${text}`}>
-                    <ListItemText className={classes.listItemText} primary={text}/>
-                  </ListItem>
-                ))}
+                  {navItems.map((text) => (
+                    <ListItem className={classes.listItem} key={text} component={Link} to={`/${text}`}>
+                      <ListItemText className={classes.listItemText} primary={text}/>
+                    </ListItem>
+                  ))}
               </List>
-              
-              <Route path="/home" exact component={Home}/>
-              <Route path="/about" exact component={About}/>
-              
-            </Router>
     </Drawer>
   );
   

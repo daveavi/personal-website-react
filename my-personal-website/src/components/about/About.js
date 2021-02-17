@@ -25,10 +25,10 @@ const About = () => {
   return (
     <ThemeProvider theme={muiTheme}>
         <div className="Home">
-          <MenuProvider>
+          {/* <MenuProvider>
             <Header/>
             <SideBar/>
-          </MenuProvider>
+          </MenuProvider> */}
           <h1>
               ABOUT!!!
           </h1>
