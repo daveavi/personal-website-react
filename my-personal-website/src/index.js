@@ -9,13 +9,12 @@ import { BrowserRouter as Router ,Route, Switch} from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <Home /> */}
     <Router>
-      <Home />
+      {/* <Home /> */}
         <Switch>
-          <Route path="/" exact component={Home}/>
-          <Route path="/About" exact component={About}/>
+          <Route path="/" exact  component={Home}/> 
           <Route path="/Home" exact  component={Home}/> 
+          <Route path="/About" exact component={About}/>
         </Switch> 
     </Router>
   
