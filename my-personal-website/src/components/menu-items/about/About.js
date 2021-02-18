@@ -1,7 +1,5 @@
 import React from 'react';
 import '../../home/css/Home.css';
-import {theme} from '../../home/css/theme'
-import {useStyles} from '../../home/css/styles'
 import {MenuProvider} from '../../home/MenuContext'
 import Header from '../../header/Header'
 import SideBar from '../../sidebar/SideBar'
@@ -10,8 +8,7 @@ import SideBar from '../../sidebar/SideBar'
 
 
 import 'fontsource-roboto' 
-import {ThemeProvider} from '@material-ui/core/styles'
-import { createMuiTheme }  from '@material-ui/core/styles'
+import Typography from '@material-ui/core/Typography'
 
 
 
@@ -19,21 +16,27 @@ import { createMuiTheme }  from '@material-ui/core/styles'
 
 
 const About = () => {
-  const classes = useStyles();
-  const muiTheme = createMuiTheme(theme)
 
   return (
-    <ThemeProvider theme={muiTheme}>
-        <div className="Home">
-          <MenuProvider>
-            <Header/>
-            <SideBar/>
-          </MenuProvider>
-          <h1>
-              ABOUT!!!
-          </h1>
+      <div className="Home">
+        <MenuProvider>
+          <Header/>
+          <SideBar/>
+        </MenuProvider>
+        <div>
+          <Typography style={{paddingBottom:650, fontSize:50, marginRight:70}}variant="h1">
+            About
+          </Typography>
+
+          <Typography style={{fontSize: 20}} variant="p">
+          Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum.
+          </Typography>
         </div>
-    </ThemeProvider>
+        <img>
+        
+        </img>
+
+      </div>
     );
 }
 
