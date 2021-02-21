@@ -12,7 +12,7 @@ import SideBar from '../../sidebar/SideBar'
 import 'fontsource-roboto' 
 import {ThemeProvider} from '@material-ui/core/styles'
 import { createMuiTheme }  from '@material-ui/core/styles'
-
+import Typography from '@material-ui/core/Typography'
 
 
 
@@ -24,14 +24,14 @@ const Projects = () => {
 
   return (
     <ThemeProvider theme={muiTheme}>
-        <div className="Home">
+        <div className="MainLayout">
           <MenuProvider>
             <Header/>
             <SideBar/>
           </MenuProvider>
-          <h1>
-              Projects!!!
-          </h1>
+          <Typography style={{paddingBottom:650, fontSize:50, marginRight:70}}variant="h1">
+            Projects
+          </Typography>
         </div>
     </ThemeProvider>
     );

@@ -12,7 +12,7 @@ import SideBar from '../../sidebar/SideBar'
 import 'fontsource-roboto' 
 import {ThemeProvider} from '@material-ui/core/styles'
 import { createMuiTheme }  from '@material-ui/core/styles'
-
+import Typography from '@material-ui/core/Typography'
 
 
 
@@ -29,9 +29,9 @@ const Music = () => {
             <Header/>
             <SideBar/>
           </MenuProvider>
-          <h1>
-              Music!!!
-          </h1>
+          <Typography style={{paddingBottom:650, fontSize:50, marginRight:70}}variant="h1">
+            Music
+          </Typography>
         </div>
     </ThemeProvider>
     );

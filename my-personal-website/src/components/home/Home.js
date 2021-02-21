@@ -25,18 +25,23 @@ const Home = () => {
 
   return (
     <ThemeProvider theme={muiTheme}>
-        <div className="Home">
-          <MenuProvider>
+        <div className="MainLayout">
+          {/* <MenuProvider>
             <Header/>
             <SideBar/>
-          </MenuProvider>
-          <Intro />
-
-          <Icon icon={classes.icon} iconContainer={classes.iconContainer}/>
+          </MenuProvider> */}
+          <div id="homePage">
+            <Intro />
+            <Icon icon={classes.icon} iconContainer={classes.iconContainer}/>
+          </div>
         </div>
     </ThemeProvider>
     );
 }
+
+
+
+
 
 export default Home;
 
