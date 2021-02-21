@@ -1,5 +1,5 @@
 .MainLayout {
-  position:fixed;
+  position:absolute;
   text-align: center;
   background-color:black;
   min-height: 100%;
@@ -19,15 +19,12 @@
 }
 #homePage{
   position:absolute;
-  /* min-width: 600px; */
-  /* margin: 0 auto; */
-  /* margin-top: 50px;
-  margin-right: 10000px; */
-  height: 100%; 
+  height: 40%; 
   width: 65%;
-  background: #F00; 
+  /* background: #F00;  */
+  padding-top: 70px;
   left: 50%;
-  top: 40%;
+  top: 30%;
   transform: translate(-50%);
 }
 .introDiv {
