@@ -26,10 +26,10 @@ const Home = () => {
   return (
     <ThemeProvider theme={muiTheme}>
         <div className="MainLayout">
-          {/* <MenuProvider>
+          <MenuProvider>
             <Header/>
             <SideBar/>
-          </MenuProvider> */}
+          </MenuProvider>
           <div id="homePage">
             <Intro />
             <Icon icon={classes.icon} iconContainer={classes.iconContainer}/>

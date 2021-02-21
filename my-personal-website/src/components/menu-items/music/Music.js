@@ -24,7 +24,7 @@ const Music = () => {
 
   return (
     <ThemeProvider theme={muiTheme}>
-        <div className="Home">
+        <div className="MainLayout">
           <MenuProvider>
             <Header/>
             <SideBar/>

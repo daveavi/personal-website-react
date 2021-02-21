@@ -35,7 +35,7 @@ const About = () => {
           <br></br> life has taken me to interesting places in my personal development, 
           <br></br> to become adventourous and see where my creativity can take me. I have struggled with trying to prove
           <br></br> I am somebody in the tech space, and having to prove my worthiness that I could build projects on my own
-          <br></br> be the typical developer an employer would want, a person that geniunely loves tech. Well, although I wanted these 
+          <br></br> be the typical developer an employer would want, a person that is enthusiastic about tech. Well, although I wanted these 
           <br></br> external results, I felt a lack of morale to keep myself from learning and diving deep into learning new technologies
           </Typography>
         </div>
