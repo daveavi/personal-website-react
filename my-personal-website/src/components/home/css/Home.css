@@ -10,6 +10,8 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 .iconContainer{
@@ -19,8 +21,8 @@
 }
 #homePage{
   position:absolute;
-  height: 40%; 
-  width: 65%;
+  /* height: 40%; 
+  width: 65%; */
   /* background: #F00;  */
   padding-top: 70px;
   left: 50%;
