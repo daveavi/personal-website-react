@@ -1,6 +1,4 @@
 import { makeStyles } from '@material-ui/core/styles'
-import { CenterFocusStrong } from '@material-ui/icons';
-
 
 const useStyles = makeStyles((theme) => ({
     aboutTitle:{
@@ -9,17 +7,17 @@ const useStyles = makeStyles((theme) => ({
         top: '80px',
     },
     aboutDesc: {
-        position: "absolute",
+        position: "fixed",
         fontSize: 20, 
         top: '250px',
         wordSpacing: '10px',
-        backgroundColor: 'red',
-        left: "1000px",
+        // backgroundColor: 'red',
+        left: "200px",
         right: "20px",
-        height: "300px", 
-
-
-
+        maxWidth:"2000px",
+        maxHeight: "500px", 
+        textAlign:"justify",
+        whiteSpace: "nowrap"
     }
 }))
 
