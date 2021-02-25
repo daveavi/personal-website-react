@@ -54,7 +54,7 @@ const Projects = () => {
           
           <Grid container spacing={2} className ={classes.grid}>
             <Grid item xs={12} md={6}>
-              <Paper className={classes.paper}>Personal Wesbite</Paper>
+              <Paper className={classes.paper}>Personal Website</Paper>
             </Grid>
             <Grid item xs={12} md={6}>
               <Paper className={classes.paper}>Twitter Focus</Paper>
@@ -66,6 +66,7 @@ const Projects = () => {
               <Paper className={classes.paper}>Place Replica</Paper>
             </Grid>
           </Grid>
+         
          
       
         </div>

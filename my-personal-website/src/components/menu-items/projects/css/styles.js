@@ -8,7 +8,8 @@ const useStyles = makeStyles((theme) => ({
     },
 
     grid:{
-        top:'10px',
+        marginTop:'300px',
+        top:'1000px',
         width: '100%',
         margin: '0px'
     },
