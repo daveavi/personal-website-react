@@ -6,7 +6,7 @@ import {useStyles} from './css/styles'
 import {MenuProvider} from '../../home/MenuContext'
 import Header from '../../header/Header'
 import SideBar from '../../sidebar/SideBar'
-
+import { borders, borderColor } from '@material-ui/system';
 
 
 
@@ -54,16 +54,16 @@ const Projects = () => {
           
           <Grid container spacing={2} className ={classes.grid}>
             <Grid item xs={12} md={6}>
-              <Paper className={classes.paper}>Personal Website</Paper>
+              <Paper borderColor="white" variant="outlined"className={classes.paper}>Personal Website</Paper>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Paper className={classes.paper}>Twitter Focus</Paper>
+              <Paper variant="outlined" className={classes.paper}>Twitter Focus</Paper>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Paper className={classes.paper}>Vesta</Paper>
+              <Paper variant="outlined"  className={classes.paper}>Vesta</Paper>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Paper className={classes.paper}>Place Replica</Paper>
+              <Paper variant="outlined" className={classes.paper}>Place Replica</Paper>
             </Grid>
           </Grid>
          
@@ -75,3 +75,5 @@ const Projects = () => {
 }
 
 export default Projects;
+
+
