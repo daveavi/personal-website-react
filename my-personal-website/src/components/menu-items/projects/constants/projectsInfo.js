@@ -23,8 +23,7 @@ const projectInfo = [
         desc: "Replica of reddit's r/place, scalable paint canvas hosted on AWS.",
         tools: "Nodejs, AWS, Redis"
     }
-
-
-
-
 ]
+
+export default projectInfo
+

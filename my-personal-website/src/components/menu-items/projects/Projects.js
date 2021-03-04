@@ -17,14 +17,17 @@ import { createMuiTheme }  from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
 
-
+import projectInfo from './constants/projectsInfo'
 
 
 
 const Projects = () => {
   const classes = useStyles();
   const muiTheme = createMuiTheme(theme)
+  const projects = projectInfo
 
   function FormRow() {
     return (
@@ -47,28 +50,31 @@ const Projects = () => {
             <Header/>
             <SideBar/>
           </MenuProvider>
-          <Typography className={classes.projectsTitle} variant="h1">
+          <Typography className={classes.projectsHeader} variant="h1">
             Projects
           </Typography> 
 
           
-          <Grid container spacing={2} className ={classes.grid}>
-            <Grid item xs={12} md={6}>
-              <Paper borderColor="white" variant="outlined"className={classes.paper}>Personal Website</Paper>
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <Paper variant="outlined" className={classes.paper}>Twitter Focus</Paper>
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <Paper variant="outlined"  className={classes.paper}>Vesta</Paper>
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <Paper variant="outlined" className={classes.paper}>Place Replica</Paper>
-            </Grid>
-          </Grid>
-         
-         
-      
+          
+
+          <div className={classes.projects}>
+
+            {projects.map((item) => 
+              <Card className={classes.card}> 
+                <CardContent className={classes.cardContent}>
+                  <Typography variant="h2">
+                    {item.title}
+                  </Typography>
+                  
+                  <Typography variant="h2" style={{marginTop:20}}>
+                    {item.desc}
+                  </Typography>
+
+                </CardContent>
+              </Card>
+            )}
+          </div>
+    
         </div>
     </ThemeProvider>
     );
